@@ -14,3 +14,13 @@ yarn add @types/react-router-dom
 yarn add bootstrap
 
 yarn add react-bootstrap
+
+yarn add axios
+
+
+
+
+
+Type use different way
+
+https://www.bezkoder.com/react-typescript-axios/

@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
-import Header from './header/header';
+import Header from './components/header/header';
+import ListCustomer from './components/customer/list-customer.component';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const routing = (
@@ -13,7 +13,7 @@ const routing = (
       <Header />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/customers" component={App}/>
+        <Route path="/customer" component={ListCustomer}/>
       </Switch>
     </div>
   </Router>
