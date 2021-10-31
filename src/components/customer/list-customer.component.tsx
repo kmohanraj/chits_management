@@ -8,6 +8,7 @@ import CustomerService from '../../services/customer.service';
 import { Link } from "react-router-dom";
 import "../../components/customer/customer.component.css"
 import { AddCustomerModal } from '../../components/customer/add-customer.component';
+import { EditCustomerModal} from '../../components/customer/edit-customer.component';
 
 type Props = {}
 type State = {
@@ -73,6 +74,7 @@ class ListCustomer extends Component<Props, State> {
     this.listCustomer();
   }
 
+  // Retrive all customers
   listCustomer() {
     CustomerService.getAllCustomers()
     .then(response => {
@@ -85,6 +87,16 @@ class ListCustomer extends Component<Props, State> {
       console.log(error);
     })
   }
+
+  // Create a customer 
+  createCustomer(data: Customer) {
+    CustomerService.create(data)
+    .then(response => {
+      console.log(response)
+    })
+  }
+
+  // Delete a customer
 
   modalOpen() {
     this.setState({ modal: true });
@@ -181,7 +193,9 @@ class ListCustomer extends Component<Props, State> {
     console.log("-------------------------")
     console.log(customerInput)
     console.log("-------------------------")
+    this.createCustomer(customerInput)
     this.setState({ modal: false });
+    this.listCustomer();
   }
   render() {
     const { customers } = this.state;
@@ -219,8 +233,8 @@ class ListCustomer extends Component<Props, State> {
               <td>{customer.phone}</td>
               <td>{customer.nominee}</td>
               <td className="p-2">
-                <Link to="/">edit</Link>
-                <Link to="/">delete</Link>
+                <Button onClick={e => this.modalOpen()}>edit</Button>
+                <Button onClick={e => this.modalOpen()}>delete</Button>
               </td>
             </tr>
             ))}
