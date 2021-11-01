@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import Header from './components/header/header';
-import ListCustomer from './components/customer/list-customer.component';
+import CustomerList from './components/customer/customer-list.component';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const routing = (
@@ -13,7 +13,7 @@ const routing = (
       <Header />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/customer" component={ListCustomer}/>
+        <Route path="/customer" component={CustomerList}/>
       </Switch>
     </div>
   </Router>
