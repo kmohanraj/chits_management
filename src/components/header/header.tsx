@@ -11,8 +11,14 @@ class Header extends Component {
         <NavLink className="nav-link" exact activeClassName="active" to="/">
           Home
         </NavLink>
-        <NavLink className="nav-link" exact activeClassName="active" to="/customer">
+        <NavLink className="nav-link" exact activeClassName="active" to="/customers">
           Customers
+        </NavLink>
+        <NavLink className="nav-link" exact activeClassName="active" to="/groups">
+          Groups
+        </NavLink>
+        <NavLink className="nav-link" exact activeClassName="active" to="/mapping">
+          Mapping
         </NavLink>
       </nav>
     )
