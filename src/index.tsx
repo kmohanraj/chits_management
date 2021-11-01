@@ -5,6 +5,8 @@ import App from './App';
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom';
 import Header from './components/header/header';
 import CustomerList from './components/customer/customer-list.component';
+import GroupList from './components/group/group-list.component';
+import MappingList from './components/mapping/mapping-list.component';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const routing = (
@@ -13,7 +15,10 @@ const routing = (
       <Header />
       <Switch>
         <Route exact path="/" component={App} />
-        <Route path="/customer" component={CustomerList}/>
+        <Route path="/customers" component={CustomerList}/>
+        <Route path="/groups" component={GroupList} />
+        <Route path="/groups" component={GroupList} />
+        <Route path="/mapping" component={MappingList} />
       </Switch>
     </div>
   </Router>

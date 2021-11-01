@@ -13,21 +13,3 @@ export default interface Customer {
   alternatePhone: number;
   email: string;
 }
-
-
-
-// export default interface CustomerType {
-//   firstName: '',
-//   lastName: '',
-//   address: '',
-//   locality: ''
-//   city: '',
-//   pinCode: '',
-//   nominee: '',
-//   aadharNo: '',
-//   panNo: '',
-//   phone: 0,
-//   alternatePhone: 0,
-//   email: ''
-// }
-

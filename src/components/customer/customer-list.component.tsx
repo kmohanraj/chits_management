@@ -7,6 +7,7 @@ import "../../components/customer/customer.component.css"
 import CustomerService from '../../services/customer.service';
 import { Link } from "react-router-dom";
 import { CustomerModal} from '../../components/customer/customer-modal.component';
+import { useTable } from 'react-table';
 
 type Props = {}
 type State = {

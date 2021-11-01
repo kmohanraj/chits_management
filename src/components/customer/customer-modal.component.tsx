@@ -195,7 +195,7 @@ export class CustomerModal extends Component<any, any> {
           <Form onSubmit={this.handleSubmit}>
             <Row className="mb-3">
               <h6>Personal Info</h6>
-              <hr></hr>
+              {/* <hr></hr> */}
               <Form.Group as={Col} controlId="formGridFirstName">
                 <Form.Label>First Name</Form.Label>
                 <Form.Control type="text" 
@@ -251,7 +251,7 @@ export class CustomerModal extends Component<any, any> {
             </Row>
             <Row className="mb-3">
               <h6>Identify Info</h6>
-              <hr className="hr-style"></hr>
+              {/* <hr className="hr-style"></hr> */}
               <Form.Group as={Col} controlId="formGridLocality">
                 <Form.Label>Pin Code</Form.Label>
                 <Form.Control type="text" 
